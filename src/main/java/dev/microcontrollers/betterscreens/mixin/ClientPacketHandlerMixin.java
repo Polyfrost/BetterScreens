@@ -70,7 +70,6 @@ public abstract class ClientPacketHandlerMixin extends ClientCommonPacketListene
         if (BetterScreensConfig.CONFIG.instance().preventClosingScreens) {
             Screen oldScreen = oldScreenRef.get();
             Screen currentScreen = this.minecraft.screen;
-//            ScreenHook.setScreen(oldScreen, currentScreen);
             if (oldScreen == currentScreen) {
                 return;
             }
