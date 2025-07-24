@@ -3,7 +3,6 @@ package dev.microcontrollers.betterscreens.mixin;
 import com.llamalad7.mixinextras.injector.v2.WrapWithCondition;
 import com.llamalad7.mixinextras.sugar.Share;
 import com.llamalad7.mixinextras.sugar.ref.LocalRef;
-import dev.microcontrollers.betterscreens.ScreenHook;
 import dev.microcontrollers.betterscreens.config.BetterScreensConfig;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.ChatScreen;
