@@ -34,10 +34,8 @@
 	"custom": {
 		"modmenu": {
 			"links": {
-				"modmenu.kofi": "${kofi}",
 				"modmenu.discord": "${discord}",
-				"modmenu.modrinth": "${modrinth}",
-				"modmenu.curseforge": "${curseforge}"
+				"modmenu.modrinth": "${modrinth}"
 			},
 			"update_checker": true
 		}

@@ -18,8 +18,8 @@ class ModData {
     val issues = property("mod.issues")
     val license = property("mod.license").toString()
     val modrinth = property("mod.modrinth")
-    val curseforge = property("mod.curseforge")
-    val kofi = property("mod.kofi")
+//    val curseforge = property("mod.curseforge")
+//    val kofi = property("mod.kofi")
     val discord = property("mod.discord")
 }
 
@@ -242,8 +242,8 @@ tasks.processResources {
         put("issues", mod.issues)
         put("license", mod.license)
         put("modrinth", mod.modrinth)
-        put("curseforge", mod.curseforge)
-        put("kofi", mod.kofi)
+//        put("curseforge", mod.curseforge)
+//        put("kofi", mod.kofi)
         put("discord", mod.discord)
         put("yacl_version", deps.yaclVersion)
 
