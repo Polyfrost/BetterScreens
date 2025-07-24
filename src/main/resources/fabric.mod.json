@@ -5,7 +5,9 @@
 	"name": "${name}",
 	"description": "${description}",
 	"authors": [
-		"Microcontrollers"
+		"Microcontrollers",
+        "Moulberry",
+        "nea89o"
 	],
 	"contributors": [
 	],

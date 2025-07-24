@@ -1,7 +1,7 @@
-package dev.microcontrollers.examplemod;
+package dev.microcontrollers.betterscreens;
 
 import dev.kikugie.fletching_table.annotation.fabric.Entrypoint;
-import dev.microcontrollers.examplemod.config.ExampleConfig;
+import dev.microcontrollers.betterscreens.config.BetterScreensConfig;
 //? if fabric
 import net.fabricmc.api.ModInitializer;
 //? if neoforge {
@@ -17,18 +17,18 @@ import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 *///?} else {
 @Entrypoint
 //?}
-public class ExampleMod /*? if fabric {*/ implements ModInitializer /*?}*/ {
+public class BetterScreens /*? if fabric {*/ implements ModInitializer /*?}*/ {
     //? if fabric {
     @Override
     public void onInitialize() {
-        ExampleConfig.CONFIG.load();
+        BetterScreensConfig.CONFIG.load();
     }
     //?}
 
     //? if neoforge {
-    /*public ExampleMod() {
-        ExampleConfig.CONFIG.load();
-        ModLoadingContext.get().registerExtensionPoint(IConfigScreenFactory.class, () -> (client, parent) -> ExampleConfig.configScreen(parent));
+    /*public BetterScreens() {
+        BetterScreensConfig.CONFIG.load();
+        ModLoadingContext.get().registerExtensionPoint(IConfigScreenFactory.class, () -> (client, parent) -> BetterScreensConfig.configScreen(parent));
     }
 	*///?}
 }

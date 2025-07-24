@@ -26,13 +26,9 @@ stonecutter {
 			}
 		}
 
-		mc("1.21.1", listOf("fabric", "neoforge"))
-		mc("1.21.3", listOf("fabric", "neoforge"))
-		mc("1.21.4", listOf("fabric", "neoforge"))
-		mc("1.21.5", listOf("fabric", "neoforge"))
-		mc("1.21.6", listOf("fabric", "neoforge"))
+		mc("1.21.8", listOf("fabric"))
 
-		vcsVersion = "1.21.6-fabric"
+		vcsVersion = "1.21.8-fabric"
 	}
 }
 
@@ -42,4 +38,4 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ExampleMod"
+rootProject.name = "Better Screens"

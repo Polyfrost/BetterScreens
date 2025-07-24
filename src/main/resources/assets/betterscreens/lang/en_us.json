@@ -1,0 +1,14 @@
+{
+  "modmenu.descriptionTranslation.${id}": "${description}",
+  "${id}": {
+    "${id}": "${name}",
+    "prevent-closing-screens": {
+      "name": "Prevent Closing Screens",
+      "description": "Prevents the server from forcefully closing your screens. For example, your chat screen when a Hypixel SkyWars game starts.\n\nCreated by Moulberry in MoulberrysTweaks."
+    },
+    "dont-reset-cursor": {
+      "name": "Don't Reset Cursor",
+      "description": "Keeps your cursor in the same spot when opening a new screen immediately after the last. For example, backpack slots in Hypixel SkyBlock.\n\nCreated by nea89o in Firmament."
+    }
+  }
+}

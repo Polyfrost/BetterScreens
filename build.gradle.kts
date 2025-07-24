@@ -94,7 +94,7 @@ loom.runs {
 
 fletchingTable {
     mixins.create("main") {
-        default = "${mod.id}.mixins.json"
+        mixin("default", "${mod.id}.mixins.json")
     }
 
     lang.create("main") {
@@ -135,11 +135,11 @@ dependencies {
     if (loader.isFabric) {
         modImplementation("net.fabricmc:fabric-loader:${deps.fabricLoaderVersion}")!!
         modImplementation("net.fabricmc.fabric-api:fabric-api:${deps.fabricApiVersion}+${mc.version}")
-        modImplementation("dev.isxander:yet-another-config-lib:${deps.yaclVersion}+${mc.version}-${loader.loader}")
+        modImplementation("dev.isxander:yet-another-config-lib:${deps.yaclVersion}+1.21.6-${loader.loader}")
         modImplementation("com.terraformersmc:modmenu:${deps.modmenuVersion}")
     } else if (loader.isNeoforge) {
         "neoForge"("net.neoforged:neoforge:${deps.neoforgeVersion}")
-        implementation("dev.isxander:yet-another-config-lib:${deps.yaclVersion}+${mc.version}-${loader.loader}") { isTransitive = false }
+        implementation("dev.isxander:yet-another-config-lib:${deps.yaclVersion}+1.21.6-${loader.loader}") { isTransitive = false }
     }
 
 }

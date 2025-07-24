@@ -1,4 +1,4 @@
-package dev.microcontrollers.examplemod.config;
+package dev.microcontrollers.betterscreens.config;
 
 //? if fabric {
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
@@ -12,7 +12,7 @@ import net.fabricmc.api.Environment;
 public class ModMenuIntegration implements ModMenuApi {
     @Override
     public ConfigScreenFactory<?> getModConfigScreenFactory() {
-        return ExampleConfig::configScreen;
+        return BetterScreensConfig::configScreen;
     }
 }
 //?}

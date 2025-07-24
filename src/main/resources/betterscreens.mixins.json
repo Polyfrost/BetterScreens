@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "dev.microcontrollers.examplemod.mixin",
+	"package": "dev.microcontrollers.betterscreens.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"client": [
 	],

@@ -1,79 +1,23 @@
-# multiloader-multiversion-template
+# Better Screens
 
-A multiversion, multiloader template powered by Archloom and Stonecutter. Made for Fabric & NeoForge.
+Better screens is a simple mod that adds two features, "Prevent Closing Screens" and "Don't Reset Cursor".
 
-This template is made primarily suited for my own needs, but should be very simple to edit what you need!
+## Features
 
-## Important Notes
+**Prevent Closing Screens**: Prevents the server from forcefully closing your screens. For example, your chat screen when a Hypixel SkyWars game starts.
 
-Mixins are automatically registered. This allows easy preprocessing of mixins without needing to add preprocessing to the mixin json file as they get added during compile, you can now simply preprocess out the @Mixin annotation.
+**Don't Reset Cursor**: Keeps your cursor in the same spot when opening a new screen immediately after the last. For example, backpack slots in Hypixel SkyBlock.
 
-## What to Change
+These features were created by Moulberry for [MoulberrysTweaks](https://modrinth.com/mod/moulberrystweaks) and nea89o for [Firmament](https://modrinth.com/mod/firmament) respectively.
 
-### In `gradle.properties`:
+## Reasons For Making This Mod
 
-Change any properties needed. Some properties are versioned, meaning you need to edit them for every Minecraft version or loader.
+Neither MoulberrysTweaks nor Firmament are updated to the latest version of Minecraft at the time of writing, 1.21.8. Additionally, both include features that I do not want, especially Firmament, which is a massive SkyBlock mod, while I wanted something more lightweight.
 
-These `gradle.properties` files can be found in the `versions` folder. You may need to edit some of these folders/properties depending on what versions you are planning on supporting.
+If you play SkyBlock or have any uses for the other features in MoulberrysTweaks, I recommend you to use their mods instead.
 
-**Note**: mc_dep fields must be in the format `x`, `>=x`, or `>=x <=y`
+## Licenses
 
-### In `settings.gradle.kts`:
+MoulberrysTweaks is under the [MIT](https://github.com/Moulberry/MoulberrysTweaks/blob/master/LICENSE) license.
 
-Change the rootProject.name at the bottom to your mod's name.
-
-The supported Minecraft versions and loaders are also stated here.
-
-### In `fabric.mod.json`
-
-The `authors` field.
-
-### In `neoforge.mods.toml`
-
-The `authors` field.
-
-### File & Folder Names
-
-Remember to rename your files and folders to your group and project name.
-
-### In `examplemod.mixins.json`
-
-The `package` field.
-
-### Change License
-
-Remember to properly set up a license file. This template has one for the template itself (CC0-1.0) and one for myself that I use for all my mods (LGPL-3.0).
-
-## Other Notes
-
-### Publishing
-
-This template has a setup for Modrinth and CurseForge publishing.
-
-To enable publishing
-
-- Set your Modrinth and CurseForge project IDs in the project-level gradle.properties file
-- Set your API tokens in your Gradle user-level properties file
-
-For windows, this file is located at `C:\Users\{user}\.gradle\gradle.properties`
-
-Example entries for the user-level file:
-
-    modrinth.token=your_modrinth_token
-    curseforge.token=your_curseforge_token
-
-When publishing, the `CHANGELOG.md` file will be used to set the changelog.
-
-### Mixin Debug & HotSwap
-
-This setup attempts to set up HotSwap, Mixin HotSwap, and Mixin export debugging for every run config. HotSwap requires using JBR 21, so remember to switch to that or disable the JVM args in the `loom.runs` block in `build.gradle.kts`.
-
-Also, note that Mixin HotSwap is not supported on NeoForge. There should be no issue keeping the arguments for NeoForge, but let me know if issues do arise and it can easily be turned off.
-
-### Run Directory
-
-This setup uses the same run directory for all versions. See the `loom` block in `build.gradle.kts` to disable this.
-
-### ModMenu English Description
-
-This setup uses processResources to string replace the English description to be the one set in `gradle.properties`. You can change the default translation file in the `processResources` block in `build.gradle.kts`.
+Firmament is under the [GPL-3.0-or-later](https://github.com/nea89o/Firmament/blob/master/LICENSES/GPL-3.0-or-later.txt) license.
