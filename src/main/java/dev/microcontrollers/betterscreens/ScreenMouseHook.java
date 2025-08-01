@@ -9,7 +9,7 @@ import net.minecraft.client.Minecraft;
  * This code is taken from Firmament under the GPL-3.0-or-later license * <a href="https://github.com/nea89o/Firmament/blob/master/LICENSES/GPL-3.0-or-later.txt"></a>
  * Code has been converted to Java and condensed to only include the code necessary for this project. Code from TimeMark.kt has also been moved to this class for simplification.
  */
-public class ScreenHook {
+public class ScreenMouseHook {
     private static final BetterScreensConfig config = BetterScreensConfig.CONFIG.instance();
     private static Pair<Double, Double> savedPositionedP1 = null;
     private static SavedPosition savedPosition = null;

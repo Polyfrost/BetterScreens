@@ -8,7 +8,27 @@
     },
     "dont-reset-cursor": {
       "name": "Don't Reset Cursor",
-      "description": "Keeps your cursor in the same spot when opening a new screen immediately after the last. For example, backpack slots in Hypixel SkyBlock.\n\nCreated by nea89o in Firmament."
+      "description": "Keeps your cursor in the same spot when opening a new screen immediately after the last. For example, backpack slots in Hypixel SkyBlock.\n\nCreated by nea89o in Firmament.\n\nAutomatically disabled when Firmament is installed."
+    },
+    "click-out-of-containers": {
+      "name": "Click Out of Containers",
+      "description": "Allows clicking outside the bounds of a container to close it."
+    },
+    "container-background-opacity": {
+      "name": "Container Background Opacity",
+      "description": "Set the transparency of container backgrounds."
+    },
+    "container-texture-opacity": {
+      "name": "Container Texture Opacity",
+      "description": "Set the transparency of container textures."
+    },
+    "container-scale": {
+      "name": "Container GUI Scale",
+      "description": "Allows setting a different GUI scale for containers, such as your inventory or chests.\n\nThis feature currently has issues with REI, as well as a few depth and screen resizing issues."
+    },
+    "remove-recipe-book-shift": {
+      "name": "Remove Recipe Book Shift",
+      "description": "Prevents the recipe book from shifting the inventory when opening/closing. This makes no attempt to fit the recipe book in your screen if your GUI scale is too large."
     }
   }
 }
