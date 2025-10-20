@@ -1,6 +1,7 @@
 # Better Screens
 
 Better screens is a simple mod that adds two features, "Prevent Closing Screens" and "Don't Reset Cursor".
+(and a few more)
 
 ## Features
 

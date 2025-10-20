@@ -1,0 +1,18 @@
+{
+    "compatibilityLevel": "${java_version}",
+    "minVersion": "0.8",
+    "package": "org.polyfrost.betterscreens.mixins",
+    "refmap": "mixins.${mod_id}.refmap.json",
+    "injectors": {
+        "maxShiftBy": 5
+    },
+    "client": [
+        "GuiContainerMixin",
+        "GuiScreenMixin_BackgroundOpacity",
+        "GuiScreenMixin_Scale",
+        "InventoryEffectRendererMixin",
+        "containeropacity.GuiChestMixin",
+        "containeropacity.GuiInventoryMixin"
+    ],
+    "verbose": true
+}
