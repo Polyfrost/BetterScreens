@@ -18,7 +18,11 @@ public class BetterScreensConfig extends Config {
     public boolean inventoryPosition = true;
 
     // all
-    // public boolean preventClosingScreens = false;
+    @Switch(
+        title = "Prevent Closing Screens",
+        description = "Prevent the server from closing certain screens (settings, pause menu, etc). May not work on all servers."
+    )
+    public boolean preventClosingScreens = false;
     // public boolean dontResetCursor = false;
 
     @Switch(
