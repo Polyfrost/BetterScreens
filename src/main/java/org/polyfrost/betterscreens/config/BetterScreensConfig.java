@@ -25,7 +25,7 @@ public class BetterScreensConfig extends Config {
         title = "Click Out of Containers",
         description = "Click outside a container to close the menu."
     )
-    public boolean clickOutOfContainers;
+    public boolean clickOutOfContainers = false;
 
     @Dropdown(
         title = "Inventory Scale",
