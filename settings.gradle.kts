@@ -1,41 +1,45 @@
+@file:Suppress("PropertyName")
+
+import groovy.lang.MissingPropertyException
+
 pluginManagement {
-	repositories {
-		mavenCentral()
-		gradlePluginPortal()
-		maven("https://maven.fabricmc.net")
-		maven("https://maven.neoforged.net/releases")
-		maven("https://maven.architectury.dev")
-		maven("https://maven.kikugie.dev/snapshots")
-		maven("https://maven.kikugie.dev/releases")
-		maven("https://repo.polyfrost.cc/releases")
-	}
-}
+    repositories {
+        maven("https://maven.deftu.dev/releases")
+        maven("https://maven.fabricmc.net")
+        maven("https://maven.architectury.dev/")
+        maven("https://maven.minecraftforge.net")
+        maven("https://repo.essential.gg/repository/maven-public")
+        maven("https://server.bbkr.space/artifactory/libs-release/")
+        maven("https://jitpack.io/")
 
-plugins {
-	id("dev.kikugie.stonecutter") version "0.6.1"
-}
+        maven("https://maven.deftu.dev/snapshots")
+        mavenLocal()
 
-stonecutter {
-	kotlinController = true
-	centralScript = "build.gradle.kts"
+        gradlePluginPortal()
+        mavenCentral()
+    }
 
-	create(rootProject) {
-		fun mc(mcVersion: String, loaders: Iterable<String>) {
-			for (loader in loaders) {
-				vers("$mcVersion-$loader", mcVersion)
-			}
-		}
-
-		mc("1.21.8", listOf("fabric"))
-
-		vcsVersion = "1.21.8-fabric"
-	}
-}
-
-dependencyResolutionManagement {
-    versionCatalogs {
-        create("libs")
+    plugins {
+        kotlin("jvm") version("2.2.10")
+        id("dev.deftu.gradle.multiversion-root") version("2.51.0")
     }
 }
 
-rootProject.name = "Better Screens"
+val projectName: String = extra["mod.name"]?.toString()
+    ?: throw MissingPropertyException("mod.name has not been set.")
+
+rootProject.name = projectName
+rootProject.buildFileName = "root.gradle.kts"
+
+listOf(
+    "1.8.9-forge",
+    "1.8.9-fabric",
+    "1.12.2-forge",
+    "1.12.2-fabric",
+).forEach { version ->
+    include(":$version")
+    project(":$version").apply {
+        projectDir = file("versions/$version")
+        buildFileName = "../../build.gradle.kts"
+    }
+}

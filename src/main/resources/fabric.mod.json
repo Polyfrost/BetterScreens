@@ -1,43 +1,24 @@
 {
-	"schemaVersion": 1,
-	"id": "${id}",
-	"version": "${version}",
-	"name": "${name}",
-	"description": "${description}",
-	"authors": [
-		"Microcontrollers",
-        "Moulberry",
-        "nea89o"
-	],
-	"contributors": [
-	],
-	"contact": {
-		"homepage": "${modrinth}",
-		"sources": "${source}",
-		"issues": "${issues}"
-	},
-	"license": "${license}",
-	"icon": "assets/${id}/icon.png",
-	"environment": "client",
-	"depends": {
-		"fabricloader": ">=${fabric_loader_version}",
-		"minecraft": "${mcdep}",
-		"java": ">=21",
-		"fabric-api": "*",
-		"yet_another_config_lib_v3": ">=${yacl_version}"
-	},
-	"breaks": {
-		"feather": "*",
-		"labymod": "*",
-		"ichor": "*"
-	},
-	"custom": {
-		"modmenu": {
-			"links": {
-				"modmenu.discord": "${discord}",
-				"modmenu.modrinth": "${modrinth}"
-			},
-			"update_checker": true
-		}
-	}
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${mod_version}",
+  "name": "${mod_name}",
+  "authors": [
+    "Polyfrost"
+  ],
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      {
+        "value": "org.polyfrost.betterscreens.BetterScreens"
+      }
+    ]
+  },
+  "mixins": [
+    "mixins.${mod_id}.json"
+  ],
+  "depends": {
+    "minecraft": "~${minor_mc_version}",
+    "fabricloader": ">=0.15.11"
+  }
 }
