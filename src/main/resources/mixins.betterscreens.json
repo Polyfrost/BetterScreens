@@ -12,8 +12,12 @@
         "GuiScreenMixin_BackgroundOpacity",
         "GuiScreenMixin_Scale",
         "InventoryEffectRendererMixin",
+        "ScaledResolutionMixin",
         "containeropacity.GuiChestMixin",
         "containeropacity.GuiInventoryMixin"
     ],
-    "verbose": true
+    "verbose": true,
+    "mixins": [
+        "ForgeHooksClientMixin"
+  ]
 }
