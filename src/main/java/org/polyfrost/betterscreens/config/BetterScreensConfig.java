@@ -8,6 +8,8 @@ import org.polyfrost.oneconfig.api.config.v1.annotations.Switch;
 public class BetterScreensConfig extends Config {
     public BetterScreensConfig() {
         super(org.polyfrost.betterscreens.BetterScreens.ID + ".json", org.polyfrost.betterscreens.BetterScreens.NAME, Category.QOL);
+
+        loadFrom("patcher.toml");
     }
 
     // 1.8 (and maybe 1.16 if you really care) only
